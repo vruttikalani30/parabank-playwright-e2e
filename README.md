@@ -8,16 +8,15 @@ The objective of this project is to demonstrate real-world automation engineerin
 Application under test:
 https://parabank.parasoft.com/parabank
 
-**Tech Stack
-**
+**Tech Stack**
+
 Playwright
 TypeScript
 Node.js
 Page Object Model (POM)
 REST API testing
 
-**Prerequisites
-**
+**Prerequisites**
 Ensure the following are installed on your system:
 
 Node.js (v16 or higher recommended)
@@ -48,8 +47,7 @@ Playwright requires browser binaries (Chromium, Firefox, WebKit):
 
 npx playwright install
 
-**Test Execution
-**
+**Test Execution**
 Install dependencies
 npm install
 
@@ -61,6 +59,12 @@ npx playwright test tests/ui
 
 Run only API tests
 npx playwright test tests/api
+
+Run Tests in Headed Mode
+npx playwright test --headed
+
+Run Tests with Debug Mode
+npx playwright test --debug
 
 View HTML report
 npx playwright show-report
