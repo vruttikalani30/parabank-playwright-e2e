@@ -11,13 +11,9 @@ https://parabank.parasoft.com/parabank
 **Tech Stack**
 
 Playwright
-
 TypeScript
-
 Node.js
-
 Page Object Model (POM)
-
 REST API testing
 
 **Prerequisites**
