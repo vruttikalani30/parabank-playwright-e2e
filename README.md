@@ -8,34 +8,48 @@ The objective of this project is to demonstrate real-world automation engineerin
 Application under test:
 https://parabank.parasoft.com/parabank
 
-Scope of Automation
-✔ UI Automation
-
-User registration with dynamically generated unique credentials
-Secure login validation
-Global navigation verification
-Savings account creation
-Account balance validation
-Fund transfer between accounts
-Bill payment flow
-End-to-end assertions at each critical step
-
-API Automation
-
-Transaction search using ParaBank “Find Transactions” REST API
-Validation of bill payment transactions by amount
-JSON response validation for transaction details
-
-Tech Stack
-
+**Tech Stack
+**
 Playwright
 TypeScript
 Node.js
 Page Object Model (POM)
 REST API testing
 
+**Prerequisites
+**
+Ensure the following are installed on your system:
 
-Test Execution
+Node.js (v16 or higher recommended)
+https://nodejs.org/
+
+npm (comes with Node.js)
+
+A modern OS (Windows / macOS / Linux)
+
+Verify installation:
+
+node -v
+npm -v
+
+Clone the Repository
+git clone <github-repo-url>
+cd parabank-playwright-e2e
+
+Install Project Dependencies
+
+Install all required Node modules and Playwright packages:
+
+npm install
+
+Install Playwright Browsers
+
+Playwright requires browser binaries (Chromium, Firefox, WebKit):
+
+npx playwright install
+
+**Test Execution
+**
 Install dependencies
 npm install
 
