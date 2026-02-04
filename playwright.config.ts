@@ -1,0 +1,14 @@
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests',
+  timeout: 60 * 1000,
+  use: {
+    baseURL: 'https://parabank.parasoft.com',
+    browserName: 'chromium',
+    headless: true,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure'
+  },
+  reporter: [['html', { open: 'never' }]]
+});
