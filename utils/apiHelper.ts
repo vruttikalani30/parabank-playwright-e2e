@@ -1,11 +1,11 @@
 import { APIRequestContext } from '@playwright/test';
 
-export async function findTransactionsByAmount(
+export const findTransactionByAmount = async (
   request: APIRequestContext,
   accountId: string,
   amount: string
-) {
+) => {
   return request.get(
-    `/parabank/services_proxy/bank/accounts/${accountId}/transactions/amount/${amount}?timeout=30000`
+    `/services_proxy/bank/accounts/${accountId}/transactions/amount/${amount}?timeout=30000`
   );
-}
+};
