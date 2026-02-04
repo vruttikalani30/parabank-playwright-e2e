@@ -4,7 +4,7 @@ export class HomePage {
   constructor(private page: Page) {}
 
   async verifyGlobalMenu() {
-    const menuItems = [
+    const menu = [
       'Open New Account',
       'Accounts Overview',
       'Transfer Funds',
@@ -12,9 +12,9 @@ export class HomePage {
       'Find Transactions'
     ];
 
-    for (const item of menuItems) {
-      await this.page.click(`text=${item}`);
-      await expect(this.page.locator('h1, h2')).toContainText(item);
+    for (const item of menu) {
+      await this.page.click(`a:has-text("${item}")`);
+      await expect(this.page.locator('h1')).toContainText(item);
     }
   }
 }
