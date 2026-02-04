@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
-import { findTransactionsByAmount } from '../../utils/apiHelper';
+import { findTransactionByAmount } from '../../utils/apiHelper';
 
-test('Validate transaction search by amount', async ({ request }) => {
-  const accountId = '12345'; // replace dynamically if needed
+test('Find transaction by amount API', async ({ request }) => {
+  const accountId = '12345';
   const amount = '5';
 
-  const response = await findTransactionsByAmount(request, accountId, amount);
+  const response = await findTransactionByAmount(request, accountId, amount);
   expect(response.ok()).toBeTruthy();
 
   const json = await response.json();
