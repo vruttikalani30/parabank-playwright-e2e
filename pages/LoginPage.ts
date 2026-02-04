@@ -8,6 +8,6 @@ export class LoginPage {
     await this.page.fill('input[name="password"]', password);
     await this.page.click('input[value="Log In"]');
 
-    await expect(this.page.locator('text=Accounts Overview')).toBeVisible();
+    await expect(this.page.locator('h1')).toHaveText('Accounts Overview');
   }
 }
