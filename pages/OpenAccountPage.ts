@@ -6,7 +6,7 @@ export class OpenAccountPage {
   async openSavingsAccount(): Promise<string> {
     await this.page.click('a[href*="openaccount.htm"]');
 
-    await this.page.selectOption('#type', '1'); // Savings
+    await this.page.selectOption('#type', '1');
     await this.page.click('input[value="Open New Account"]');
 
     const accountId = await this.page.locator('#newAccountId').textContent();
