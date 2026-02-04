@@ -3,8 +3,9 @@ import { Page, expect } from '@playwright/test';
 export class BillPayPage {
   constructor(private page: Page) {}
 
-  async payBill(fromAccount: string, amount: string) {
-    await this.page.click('text=Bill Pay');
+  async payBill(accountId: string, amount: string) {
+    await this.page.click('a[href*="billpay.htm"]');
+
     await this.page.fill('input[name="payee.name"]', 'Electricity');
     await this.page.fill('input[name="payee.address.street"]', 'Street');
     await this.page.fill('input[name="payee.address.city"]', 'City');
@@ -14,9 +15,12 @@ export class BillPayPage {
     await this.page.fill('input[name="payee.accountNumber"]', '12345');
     await this.page.fill('input[name="verifyAccount"]', '12345');
     await this.page.fill('input[name="amount"]', amount);
-    await this.page.selectOption('select[name="fromAccountId"]', fromAccount);
+    await this.page.selectOption('select[name="fromAccountId"]', accountId);
+
     await this.page.click('input[value="Send Payment"]');
 
-    await expect(this.page.locator('text=Bill Payment Complete')).toBeVisible();
+    await expect(
+      this.page.locator('text=Bill Payment Complete')
+    ).toBeVisible();
   }
 }
