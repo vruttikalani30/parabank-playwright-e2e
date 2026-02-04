@@ -1,0 +1,13 @@
+{
+  "name": "parabank-playwright",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui",
+    "test:api": "npx playwright test tests/api",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0"
+  }
+}
