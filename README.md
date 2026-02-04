@@ -1,5 +1,5 @@
 # ParaBank Playwright E2E Automation Framework
-Overview
+**Overview**
 
 This repository contains a production-style End-to-End (E2E) test automation framework developed using Playwright with TypeScript for the ParaBank online banking application.
 
@@ -11,9 +11,13 @@ https://parabank.parasoft.com/parabank
 **Tech Stack**
 
 Playwright
+
 TypeScript
+
 Node.js
+
 Page Object Model (POM)
+
 REST API testing
 
 **Prerequisites**
