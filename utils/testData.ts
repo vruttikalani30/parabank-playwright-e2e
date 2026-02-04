@@ -1,15 +1,15 @@
-export function generateUser() {
-  const random = Date.now();
+export const generateUser = () => {
+  const time = Date.now();
   return {
     firstName: 'Test',
     lastName: 'User',
-    address: 'Test Address',
+    address: 'Street 1',
     city: 'Mumbai',
     state: 'MH',
-    zipCode: '400001',
+    zip: '400001',
     phone: '9999999999',
     ssn: '123456',
-    username: `user_${random}`,
+    username: `user_${time}`,
     password: 'Password@123'
   };
-}
+};
