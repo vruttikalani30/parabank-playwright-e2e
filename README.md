@@ -11,19 +11,22 @@ https://parabank.parasoft.com/parabank
 **Tech Stack**
 
 Playwright
+
 TypeScript
+
 Node.js
+
 Page Object Model (POM)
+
 REST API testing
 
 **Prerequisites**
+
 Ensure the following are installed on your system:
 
 Node.js (v16 or higher recommended)
 https://nodejs.org/
-
 npm (comes with Node.js)
-
 A modern OS (Windows / macOS / Linux)
 
 Verify installation:
